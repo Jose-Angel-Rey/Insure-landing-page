@@ -12,8 +12,8 @@
 
 - Semantic HTML5 markup
 - CSS custom properties
+- SCSS
 - Flexbox
-- SASS
 - Mobile-first workflow
 - Vanilla Javascript
 ---
