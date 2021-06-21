@@ -7,3 +7,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    font: {
+        family: $body-font;
+        size: 62.5%;
+    }
+
+    scroll-behavior: smooth;
+}
