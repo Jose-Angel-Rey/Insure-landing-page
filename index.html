@@ -35,26 +35,29 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-      <!-- Logo -->
-      <img src="./images/logo.svg" alt="Insure logo" class="navbar__logo">
-      
-      <!-- Hamburger -->
-      <img src="./images/icons/icon-hamburger.svg" alt="" class="navbar__hamburger-btn">
-      
-      <ul class="navbar__nav">
-        <li class="navbar__nav-item">
-          <a href="#" class="navbar__nav-link">How we work</a>
-        </li>
-        <li class="navbar__nav-item">
-          <a href="#" class="navbar__nav-link">Blog</a>
-        </li>
-        <li class="navbar__nav-item">
-          <a href="#" class="navbar__nav-link">Account</a>
-        </li>
-        <li class="navbar__nav-item">
-          <a href="#" class="navbar__nav-link">View plans</a>
-        </li>
-      </ul>
+
+      <div class="navbar__container">
+        <!-- Logo -->
+        <img src="./images/logo.svg" alt="Insure logo" class="navbar__logo">
+
+        <!-- Hamburger -->
+        <img src="./images/icons/icon-hamburger.svg" alt="" class="navbar__hamburger-btn">
+
+        <ul class="navbar__nav">
+          <li class="navbar__nav-item">
+            <a href="#" class="navbar__nav-link">How we work</a>
+          </li>
+          <li class="navbar__nav-item">
+            <a href="#" class="navbar__nav-link">Blog</a>
+          </li>
+          <li class="navbar__nav-item">
+            <a href="#" class="navbar__nav-link">Account</a>
+          </li>
+          <li class="navbar__nav-item">
+            <a href="#" class="navbar__nav-link">View plans</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Main header -->
@@ -63,6 +66,18 @@
       <!-- Container -->
       <div class="main-header__container">
 
+        <!-- Left pattern -->
+        <picture class="main-header__left-pattern-picture">
+          <source media="(min-width:768px)" srcset="./images/desktop-patterns/bg-pattern-intro-left-desktop.svg">
+          <img src="./images/mobile-patterns/bg-pattern-intro-left-mobile.svg" alt="" class="main-header__left-pattern">
+        </picture>
+
+        <!-- Right pattern -->
+        <picture class="main-header__right-pattern-picture">
+          <source media="(min-width:768px)" srcset="./images/desktop-patterns/bg-pattern-intro-right-desktop.svg">
+          <img src="./images/mobile-patterns/bg-pattern-intro-right-mobile.svg" alt=""
+            class="main-header__right-pattern">
+        </picture>
         <!-- Content -->
         <section class="main-header__content">
           <h1 class="main-header__title">Humanizing your insurance.</h1>
