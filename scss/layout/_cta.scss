@@ -1,3 +1,42 @@
 // *******************************
-//
+//            CTA
 // *******************************
+
+.cta {
+    @include bdr(orange);
+    display: flex;
+    margin: 10rem auto;
+    width: 100%;
+
+    &__container {
+        @include bdr(rgb(30, 8, 129));
+        @include flexbox;
+        background-color: $dark-violet;
+        background-image: url(../../images/mobile-patterns/bg-pattern-how-we-work-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: right top;
+        // background-size: 100%;
+        color: $very-light-gray;
+        margin: auto;
+        padding: 3.5rem;
+        width: 90%;
+        max-width: 37rem;
+    }
+
+    &__title {
+        font: 400 3.5rem $headings-font;
+        line-height: 3.5rem;
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+    .btn {
+        border: 2px solid #fff;
+        font-size: 1.6rem;
+        margin: 2rem auto;
+        padding: 1rem 3rem;
+        color: #fff;
+        text-decoration: none;
+    }
+
+}
