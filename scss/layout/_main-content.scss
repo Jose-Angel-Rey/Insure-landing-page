@@ -1,3 +1,63 @@
 // *******************************
-//
+//          MAIN CONTENT
 // *******************************
+
+.main-content {
+    @include bdr(orange);
+    @include flexbox;
+    width: 100%;
+
+    &__container {
+        @include bdr(rgb(30, 8, 129));
+        @include flexbox;
+        width: 90%;
+    }
+}
+
+.we-are-different {
+    @include bdr(orange);
+    @include flexbox;
+    color: $very-dark-violet;
+    margin-top: 10rem;
+    width: 100%;
+
+    &__title {
+        // @include bdr(orange);
+        font: 400 4.5rem $headings-font;
+        margin-bottom: 5rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            background-color: $dark-violet;
+            position: absolute;
+            top: -3rem;
+            left: 25%;
+            height: 1px;
+            width: 15rem;
+        }
+    }
+
+    &__content {
+        @include bdr(green);
+        @include flexbox;
+        // width: 100%;
+    }
+    &__article{
+        @include bdr(purple);
+        @include flexbox;
+        margin-bottom: 4rem;
+        width: 100%;
+        max-width: 37rem;
+    }
+    &__article-title{
+        font: 400 3rem $headings-font;
+        margin: 3rem auto 2rem;
+    }
+    &__article-description{
+        color: $dark-grayish-violet;
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+}

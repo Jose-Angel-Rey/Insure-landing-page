@@ -9,6 +9,7 @@
     // min-height: 10vh;
     width: 100%;
     // z-index: 100000000;
+    // display: none;
 
     &__container {
         @include bdr(blue);
@@ -39,23 +40,27 @@
         transition: transform .5s ease;
         transform: translateX(110%);
     }
-    &__nav-item{
+
+    &__nav-item {
         font-size: 1.8rem;
     }
-    &__nav-link{
+
+    &__nav-link {
         display: block;
         color: #fff;
+
         text: {
             decoration: none;
             transform: uppercase;
         }
+
         margin: 2rem auto;
 
-        &.btn{
+        &.btn {
             border: 2px solid #fff;
             padding: 1rem 6rem;
             color: #fff;
-            text-decoration: none;    
+            text-decoration: none;
             width: 100%;
         }
     }
