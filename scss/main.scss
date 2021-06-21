@@ -13,9 +13,13 @@
 @import "base/reset";
 
 //  Layout
-@import "";
-@import "";
+@import "layout/navbar";
+@import "layout/main-header";
+@import "layout/main-content";
+@import "layout/cta";
+@import "layout/main-footer";
+@import "layout/attribution";
 
 // Components
-@import "components/main-header-navbar";
+@import "components/buttons";
 @import "components/main-footer-navbar";
