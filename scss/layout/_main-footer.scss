@@ -1,6 +1,67 @@
 // *******************************
-//
+//          MAIN FOOTER
 // *******************************
-.main-footer{
-    border-top: 1px solid red;
+.main-footer {
+    @include bdr(orange);
+    @include flexbox;
+    background-color: $very-light-gray;
+    background-image: url(../../images/mobile-patterns/bg-pattern-footer-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    width: 100%;
+
+    &__container {
+        @include bdr(rgb(30, 8, 129));
+        @include flexbox;
+        margin: 8rem auto 5rem;
+        width: 90%;
+    }
+
+    &__navbar {
+        @include bdr(orange);
+        margin-bottom: 3rem;
+        text: {
+            align: center;
+            transform: uppercase
+        }
+        // letter-spacing: 1px;
+        font: 700 1.4rem $body-font;
+    }
+    &__nav{
+        list-style-type: none;
+    }
+    &__nav-title{
+        color: $dark-grayish-violet;
+        margin-bottom: 2rem;
+    }
+    &__nav-link{
+        color: $very-dark-violet;
+        display: block;
+        margin-bottom: 1rem;
+        text-decoration: none
+    }
+}
+
+.social-media {
+    @include bdr(orange);
+    @include flexbox;
+    border-bottom: 1px solid $dark-grayish-violet;
+    margin-bottom: 4rem;
+    width: 100%;
+
+    &__logo {
+        width: 10rem;
+    }
+}
+
+.social-media-icons {
+    margin: 3rem auto;
+    color: $dark-grayish-violet;
+    font-size: 2rem;
+
+    .fab {
+        display: inline-block;
+        margin: 0 .5rem;
+    }
 }
