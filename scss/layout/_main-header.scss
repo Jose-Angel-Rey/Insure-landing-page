@@ -18,6 +18,11 @@
         // max-width: 30rem;
         width: 17rem;
 
+    @include for-medium-screens{
+        top: 80%;
+        width: 15rem;
+    }
+
         @media screen and (max-width:767px) {
             top: 56%;
         }
@@ -49,7 +54,12 @@
         width: 13rem;
 
         // max-width: 30rem;
-
+        @include for-medium-screens{
+            top: 0;
+            bottom: unset;
+            width: 35rem;
+            z-index: 100;
+        }
     }
 
     &__container {
@@ -98,8 +108,11 @@
         width: 100%;
         z-index: 50;
 
-        // object-fit: fill;
-        // object-position: center;
+    @include for-medium-screens{
+        max-height: 100%;
+        width: 60%;
+    }
+
         @media screen and (max-width:767px) {
             max-height: 65rem;
         }
