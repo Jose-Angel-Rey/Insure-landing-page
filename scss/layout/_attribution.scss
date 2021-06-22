@@ -2,13 +2,29 @@
 //          ATTRIBUTION
 // *******************************
 
-.attribution{
+.attribution {
     @include bdr;
     font-size: 1.5rem;
     text-align: center;
-padding: 2rem;
-    a{
+    padding: 2rem;
+
+    a {
         color: $dark-grayish-violet;
         font-weight: 700;
+
+        @include for-medium-screens {
+            transition: all .5s;
+            display: inline-block;
+
+            &:hover {
+                color: $very-dark-violet;
+                transform: translateY(-2px);
+            }
+
+            &:active {
+                color: $dark-grayish-violet;
+                transform: none;
+            }
+        }
     }
 }
