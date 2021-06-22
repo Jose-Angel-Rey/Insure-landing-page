@@ -17,6 +17,10 @@
         margin: auto;
         width: 90%;
         max-width: 110rem;
+
+        @include for-large-screens{
+            width: 80%;
+        }
     }
 
     &__logo {
@@ -24,7 +28,9 @@
     }
 
     &__hamburger-btn {
-        display: none;
+        @include for-medium-screens{
+            display: none;
+        }
     }
 
     &__nav {
