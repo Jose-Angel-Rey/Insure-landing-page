@@ -18,6 +18,8 @@
         // max-width: 30rem;
         width: 17rem;
 
+
+
         @include for-medium-screens {
             top: 70%;
             width: 15rem;
@@ -45,6 +47,11 @@
             width: 20rem;
         }
 
+        @include for-large-screens {
+            top: 60%;
+            width: 20rem;
+        }
+
     }
 
     &__right-pattern {
@@ -52,13 +59,16 @@
         right: 0;
         bottom: -20%;
         width: 13rem;
-
-        // max-width: 30rem;
+        
         @include for-medium-screens {
             top: 0;
             bottom: unset;
             width: 25rem;
             z-index: 100;
+        }
+
+        @include for-large-screens {
+            width: 30rem;
         }
     }
 
