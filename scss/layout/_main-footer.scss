@@ -18,6 +18,9 @@
 
     }
 
+    @include for-large-screens {
+        background-size: 40%;
+    }
 
     &__container {
         @include bdr(rgb(30, 8, 129));
@@ -59,6 +62,12 @@
         @include for-medium-screens {
             margin: 0;
             text-align: left;
+        }
+
+        &:last-of-type{
+            @include for-large-screens{
+                margin-right: 25rem;
+            }
         }
 
     }

@@ -8,6 +8,10 @@
     margin: 10rem auto;
     width: 100%;
 
+    @include for-large-screens {
+        margin: 15rem auto;
+    }
+
     &__container {
         @include bdr(rgb(30, 8, 129));
         @include flexbox;
@@ -22,12 +26,16 @@
         width: 90%;
         max-width: 110rem;
 
-    @include for-medium-screens{
-        flex-direction: row;
-        justify-content: space-between;
-        width: 80%;
-    }
+        @include for-medium-screens {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 80%;
+        }
 
+        @include for-large-screens {
+            background-image: url(../../images/desktop-patterns/bg-pattern-how-we-work-desktop.svg);
+            padding: 5rem 8rem;
+        }
     }
 
     &__title {
@@ -36,11 +44,22 @@
         margin: 2rem auto;
         text-align: center;
 
-    @include for-medium-screens{
-        text-align: left;
-        width: 50%;
-        max-width: 50rem;
-    }
+        @include for-medium-screens {
+            text-align: left;
+            width: 50%;
+            max-width: 40rem;
+        }
+
+        @include for-large-screens {
+            margin: 2rem 0;
+            font-size: 4.5rem;
+            line-height: 5.5rem;
+            width: 60%;
+            max-width: 49rem;
+        }
+        @media screen and(min-width:1200px){
+            font-size: 5.5rem;
+        }
 
     }
 
@@ -50,7 +69,14 @@
         margin: 2rem auto;
         padding: 1rem 3rem;
         color: #fff;
-        text-decoration: none;
+        text: {
+            decoration: none;
+            transform: uppercase;
+        }
+
+        @include for-large-screens {
+            margin: 0;
+        }
     }
 
 }
