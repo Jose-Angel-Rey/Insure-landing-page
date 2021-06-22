@@ -11,6 +11,8 @@
         @include bdr(rgb(30, 8, 129));
         @include flexbox;
         width: 90%;
+        max-width: 110rem;
+
     }
     // display: none;
 

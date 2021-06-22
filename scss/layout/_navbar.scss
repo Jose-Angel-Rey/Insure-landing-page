@@ -16,10 +16,15 @@
         @include flexbox($flow: row nowrap, $justify:space-between);
         margin: auto;
         width: 90%;
+        max-width: 110rem;
     }
 
     &__logo {
         width: 12rem;
+    }
+
+    &__hamburger-btn {
+        display: none;
     }
 
     &__nav {
@@ -39,22 +44,41 @@
         z-index: 1000;
         transition: transform .5s ease;
         transform: translateX(110%);
+
+        @include for-medium-screens {
+            position: static;
+            background: transparent;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding-top: 0;
+            height: auto;
+            width: 45rem;
+            transform: none;
+        }
     }
 
     &__nav-item {
         font-size: 1.8rem;
+
+        @include for-medium-screens {
+            font-size: 1.6rem;
+        }
     }
 
     &__nav-link {
         display: block;
         color: #fff;
+        margin: 2rem auto;
 
         text: {
             decoration: none;
             transform: uppercase;
         }
 
-        margin: 2rem auto;
+        @include for-medium-screens {
+            color: $dark-grayish-violet;
+            margin: 0;
+        }
 
         &.btn {
             border: 2px solid #fff;
@@ -62,6 +86,12 @@
             color: #fff;
             text-decoration: none;
             width: 100%;
+
+            @include for-medium-screens {
+                color: $very-dark-violet;
+                border-color: $very-dark-violet;
+                padding: 1rem 2rem;
+            }
         }
     }
 }

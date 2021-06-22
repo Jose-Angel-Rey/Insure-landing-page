@@ -24,7 +24,8 @@
         @include flexbox;
         margin: 8rem auto 5rem;
         width: 90%;
-        max-width: 90rem;
+        max-width: 110rem;
+
 
         @media screen and (min-width:500px) {
             flex-flow: row wrap;

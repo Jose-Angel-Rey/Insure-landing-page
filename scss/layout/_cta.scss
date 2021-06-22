@@ -20,12 +20,12 @@
         margin: auto;
         padding: 3.5rem;
         width: 90%;
+        max-width: 110rem;
 
     @include for-medium-screens{
         flex-direction: row;
         justify-content: space-between;
         width: 80%;
-        max-width: 100rem;
     }
 
     }

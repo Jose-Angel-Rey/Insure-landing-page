@@ -65,11 +65,8 @@
     &__container {
         @include bdr(cyan);
         @include flexbox;
-        // background-image: url(../../images/mobile-patterns/bg-pattern-intro-left-mobile.svg);
-        // background-repeat: no-repeat;
-        // background-position: left center;
-        // background-size: 50%;
         width: 100%;
+        max-width: 110rem;
 
         @include for-medium-screens {
             flex-direction: row;
