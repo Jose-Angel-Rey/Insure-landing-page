@@ -64,8 +64,8 @@
             text-align: left;
         }
 
-        &:last-of-type{
-            @include for-large-screens{
+        &:last-of-type {
+            @include for-large-screens {
                 margin-right: 25rem;
             }
         }
@@ -85,7 +85,19 @@
         color: $very-dark-violet;
         display: block;
         margin-bottom: 1rem;
-        text-decoration: none
+        text-decoration: none;
+
+        @include for-medium-screens {
+            transition: all .5s;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+    
+            &:active {
+                color: $dark-grayish-violet;
+            }
+        }
     }
 }
 
@@ -115,11 +127,29 @@
 
     @include for-medium-screens {
         margin: 0;
+
     }
 
 
     .fab {
         display: inline-block;
         margin: 0 .5rem;
+
+        @include for-medium-screens {
+            cursor: pointer;
+            transition: all .5s;
+            display: inline-block;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $very-dark-violet;
+                transform: translateY(-5px);
+            }
+
+            &:active {
+                color: $dark-grayish-violet;
+                transform: none;
+            }
+        }
     }
 }

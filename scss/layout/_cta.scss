@@ -57,7 +57,8 @@
             width: 60%;
             max-width: 49rem;
         }
-        @media screen and(min-width:1200px){
+
+        @media screen and(min-width:1200px) {
             font-size: 5.5rem;
         }
 
@@ -69,9 +70,26 @@
         margin: 2rem auto;
         padding: 1rem 3rem;
         color: #fff;
+
         text: {
             decoration: none;
             transform: uppercase;
+        }
+
+        @include for-medium-screens {
+            transition: all .5s;
+            display: inline-block;
+            font-weight: 700;
+
+            &:hover {
+                color: $very-dark-violet;
+                background-color: $very-light-gray;
+                transform: translateY(-5px);
+            }
+
+            &:active {
+                transform: none;
+            }
         }
 
         @include for-large-screens {

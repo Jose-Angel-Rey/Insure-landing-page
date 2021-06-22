@@ -18,7 +18,7 @@
         width: 90%;
         max-width: 110rem;
 
-        @include for-large-screens{
+        @include for-large-screens {
             width: 80%;
         }
     }
@@ -28,7 +28,7 @@
     }
 
     &__hamburger-btn {
-        @include for-medium-screens{
+        @include for-medium-screens {
             display: none;
         }
     }
@@ -83,7 +83,20 @@
 
         @include for-medium-screens {
             color: $dark-grayish-violet;
+            font-weight: 700;
             margin: 0;
+            transition: all .5s;
+
+            &:hover {
+                color: $very-dark-violet;
+                transform: translateY(-3px);
+            }
+
+            &:active {
+                color: $dark-grayish-violet;
+                transform: none;
+            }
+
         }
 
         &.btn {
@@ -97,7 +110,18 @@
                 color: $very-dark-violet;
                 border-color: $very-dark-violet;
                 padding: 1rem 2rem;
+                transition: all .5s;
+
+                &:hover {
+                    color: $very-light-gray;
+                    background-color: $very-dark-violet;
+                }
+                &:active {
+                    background-color: lighten($very-dark-violet, 20%);
+                }
             }
+
+
         }
     }
 }

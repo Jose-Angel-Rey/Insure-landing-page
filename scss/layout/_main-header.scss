@@ -105,7 +105,7 @@
         }
 
         @include for-extra-large-screens {
-            margin: 15rem auto;
+            margin: 12rem auto;
         }
     }
 
@@ -163,6 +163,23 @@
         padding: 1rem 3rem;
         color: #fff;
         text-decoration: none;
+
+        @include for-medium-screens {
+            transition: all .5s;
+            display: inline-block;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $very-dark-violet;
+                background-color: $very-light-gray;
+                transform: translateY(-5px);
+            }
+
+            &:active {
+                transform: none;
+            }
+        }
     }
 
     // ---- Image ----
