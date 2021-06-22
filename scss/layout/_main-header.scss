@@ -18,10 +18,10 @@
         // max-width: 30rem;
         width: 17rem;
 
-    @include for-medium-screens{
-        top: 80%;
-        width: 15rem;
-    }
+        @include for-medium-screens {
+            top: 70%;
+            width: 15rem;
+        }
 
         @media screen and (max-width:767px) {
             top: 56%;
@@ -54,10 +54,10 @@
         width: 13rem;
 
         // max-width: 30rem;
-        @include for-medium-screens{
+        @include for-medium-screens {
             top: 0;
             bottom: unset;
-            width: 35rem;
+            width: 25rem;
             z-index: 100;
         }
     }
@@ -70,6 +70,13 @@
         // background-position: left center;
         // background-size: 50%;
         width: 100%;
+
+        @include for-medium-screens {
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 10rem auto;
+            width: 90%;
+        }
     }
 
     // ---- Content ----
@@ -82,11 +89,23 @@
         max-width: 50rem;
         z-index: 50;
 
+        @include for-medium-screens {
+            margin: 0;
+            text-align: left;
+            width: 50%;
+            max-width: 40rem;
+        }
     }
 
     &__title {
         font: 400 4rem $headings-font;
         line-height: 4rem;
+
+        @include for-medium-screens {
+            font-size: 4.5rem;
+            line-height: 5rem;
+
+        }
     }
 
     &__description {
@@ -108,10 +127,11 @@
         width: 100%;
         z-index: 50;
 
-    @include for-medium-screens{
-        max-height: 100%;
-        width: 60%;
-    }
+        @include for-medium-screens {
+            max-height: 100%;
+            width: 40%;
+            order: 1;
+        }
 
         @media screen and (max-width:767px) {
             max-height: 65rem;
