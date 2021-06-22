@@ -11,31 +11,67 @@
     background-size: 100%;
     width: 100%;
 
+    @include for-medium-screens {
+        background-image: url(../../images/desktop-patterns/bg-pattern-footer-desktop.svg);
+        background-position: left top;
+        background-size: 55%;
+
+    }
+
+
     &__container {
         @include bdr(rgb(30, 8, 129));
         @include flexbox;
         margin: 8rem auto 5rem;
         width: 90%;
+        max-width: 90rem;
+
+        @media screen and (min-width:500px) {
+            flex-flow: row wrap;
+        }
+
+        @include for-medium-screens {
+            margin: 5rem auto;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 80%;
+        }
+
     }
 
     &__navbar {
         @include bdr(orange);
         margin-bottom: 3rem;
+
         text: {
             align: center;
             transform: uppercase
         }
+
         // letter-spacing: 1px;
         font: 700 1.4rem $body-font;
+
+        @media screen and (min-width:500px) {
+            margin: 3rem 4rem;
+        }
+
+        @include for-medium-screens {
+            margin: 0;
+            text-align: left;
+        }
+
     }
-    &__nav{
+
+    &__nav {
         list-style-type: none;
     }
-    &__nav-title{
+
+    &__nav-title {
         color: $dark-grayish-violet;
         margin-bottom: 2rem;
     }
-    &__nav-link{
+
+    &__nav-link {
         color: $very-dark-violet;
         display: block;
         margin-bottom: 1rem;
@@ -48,7 +84,14 @@
     @include flexbox;
     border-bottom: 1px solid $dark-grayish-violet;
     margin-bottom: 4rem;
-    width: 100%;
+    width: 90%;
+
+    @include for-medium-screens {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        width: 100%;
+    }
 
     &__logo {
         width: 10rem;
@@ -59,6 +102,11 @@
     margin: 3rem auto;
     color: $dark-grayish-violet;
     font-size: 2rem;
+
+    @include for-medium-screens {
+        margin: 0;
+    }
+
 
     .fab {
         display: inline-block;
