@@ -13,7 +13,11 @@
         width: 90%;
         max-width: 110rem;
 
+        @include for-large-screens{
+            width: 80%
+        }
     }
+
     // display: none;
 
 }
@@ -25,12 +29,23 @@
     margin-top: 10rem;
     width: 100%;
 
+    @include for-large-screens {
+        align-items: flex-start;
+        margin-top: 35rem;
+        // width: 90%;
+    }
+
     &__title {
         // @include bdr(orange);
         font: 400 4.5rem $headings-font;
         margin-bottom: 5rem;
         text-align: center;
         position: relative;
+
+        @include for-large-screens {
+            font-size: 7rem;
+            margin-bottom: 9rem;
+        }
 
         &::after {
             content: "";
@@ -40,29 +55,62 @@
             left: 25%;
             height: 1px;
             width: 15rem;
+
+            @include for-large-screens {
+                top: -5rem;
+                left: 0;
+            }
         }
     }
 
     &__content {
         @include bdr(green);
         @include flexbox;
-        // width: 100%;
+
+        @include for-large-screens {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+
+        }
     }
-    &__article{
+
+    &__article {
         @include bdr(purple);
         @include flexbox;
         margin-bottom: 4rem;
         width: 100%;
         max-width: 37rem;
+
+        @include for-large-screens {
+            width: 30%;
+            // max-width: 45]rem;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        @media screen and (min-width:1200px) {
+            width: 32%;
+        }
     }
-    &__article-title{
+
+    &__article-title {
         font: 400 3rem $headings-font;
         margin: 3rem auto 2rem;
+
+        @include for-large-screens {
+            margin: 3rem 0;
+        }
     }
-    &__article-description{
+
+    &__article-description {
         color: $dark-grayish-violet;
         font-size: 1.6rem;
         line-height: 2.5rem;
         text-align: center;
+
+        @include for-large-screens {
+            text-align: left;
+        }
     }
 }
