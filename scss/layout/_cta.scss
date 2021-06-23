@@ -3,7 +3,6 @@
 // *******************************
 
 .cta {
-    @include bdr(orange);
     display: flex;
     margin: 10rem auto;
     width: 100%;
@@ -12,14 +11,13 @@
         margin: 15rem auto;
     }
 
+    // ------- Container --------
     &__container {
-        @include bdr(rgb(30, 8, 129));
         @include flexbox;
         background-color: $dark-violet;
         background-image: url(../../images/mobile-patterns/bg-pattern-how-we-work-mobile.svg);
         background-repeat: no-repeat;
         background-position: right top;
-        // background-size: 100%;
         color: $very-light-gray;
         margin: auto;
         padding: 3.5rem;
@@ -38,6 +36,7 @@
         }
     }
 
+    // ------- Title --------
     &__title {
         font: 400 3.5rem $headings-font;
         line-height: 3.5rem;

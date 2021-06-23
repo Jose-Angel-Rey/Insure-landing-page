@@ -1,0 +1,37 @@
+// *******************************
+//       SOCIAL MEDIA ICONS
+// *******************************
+
+.social-media-icons {
+    color: $dark-grayish-violet;
+    font-size: 2rem;
+    margin: 3rem auto;
+
+    @include for-medium-screens {
+        margin: 0;
+    }
+
+
+    .fab {
+        display: inline-block;
+        margin: 0 .5rem;
+
+        @include for-medium-screens {
+            cursor: pointer;
+            display: inline-block;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            transition: all .5s;
+
+            &:hover {
+                color: $very-dark-violet;
+                transform: translateY(-5px);
+            }
+
+            &:active {
+                color: $dark-grayish-violet;
+                transform: none;
+            }
+        }
+    }
+}

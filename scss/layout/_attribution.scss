@@ -3,18 +3,19 @@
 // *******************************
 
 .attribution {
-    @include bdr;
+    background-color: $very-light-gray;
     font-size: 1.5rem;
     text-align: center;
     padding: 2rem;
+    width: 100%;
 
     a {
         color: $dark-grayish-violet;
         font-weight: 700;
 
         @include for-medium-screens {
-            transition: all .5s;
             display: inline-block;
+            transition: all .5s;
 
             &:hover {
                 color: $very-dark-violet;

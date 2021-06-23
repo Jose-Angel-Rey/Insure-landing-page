@@ -1,8 +1,9 @@
 // *******************************
 //          MAIN FOOTER
 // *******************************
+
+
 .main-footer {
-    @include bdr(orange);
     @include flexbox;
     background-color: $very-light-gray;
     background-image: url(../../images/mobile-patterns/bg-pattern-footer-mobile.svg);
@@ -22,8 +23,8 @@
         background-size: 40%;
     }
 
+    // ------- Container --------
     &__container {
-        @include bdr(rgb(30, 8, 129));
         @include flexbox;
         margin: 8rem auto 5rem;
         width: 90%;
@@ -42,67 +43,10 @@
         }
 
     }
-
-    &__navbar {
-        @include bdr(orange);
-        margin-bottom: 3rem;
-
-        text: {
-            align: center;
-            transform: uppercase
-        }
-
-        // letter-spacing: 1px;
-        font: 700 1.4rem $body-font;
-
-        @media screen and (min-width:500px) {
-            margin: 3rem 4rem;
-        }
-
-        @include for-medium-screens {
-            margin: 0;
-            text-align: left;
-        }
-
-        &:last-of-type {
-            @include for-large-screens {
-                margin-right: 25rem;
-            }
-        }
-
-    }
-
-    &__nav {
-        list-style-type: none;
-    }
-
-    &__nav-title {
-        color: $dark-grayish-violet;
-        margin-bottom: 2rem;
-    }
-
-    &__nav-link {
-        color: $very-dark-violet;
-        display: block;
-        margin-bottom: 1rem;
-        text-decoration: none;
-
-        @include for-medium-screens {
-            transition: all .5s;
-    
-            &:hover {
-                text-decoration: underline;
-            }
-    
-            &:active {
-                color: $dark-grayish-violet;
-            }
-        }
-    }
 }
 
+// ------  Social media section  -----------
 .social-media {
-    @include bdr(orange);
     @include flexbox;
     border-bottom: 1px solid $dark-grayish-violet;
     margin-bottom: 4rem;
@@ -117,40 +61,5 @@
 
     &__logo {
         width: 10rem;
-    }
-}
-
-.social-media-icons {
-    margin: 3rem auto;
-    color: $dark-grayish-violet;
-    font-size: 2rem;
-
-    @include for-medium-screens {
-        margin: 0;
-
-    }
-
-
-    .fab {
-        display: inline-block;
-        margin: 0 .5rem;
-
-        @include for-medium-screens {
-            font-size: 2.5rem;
-            cursor: pointer;
-            transition: all .5s;
-            display: inline-block;
-            text-transform: uppercase;
-
-            &:hover {
-                color: $very-dark-violet;
-                transform: translateY(-5px);
-            }
-
-            &:active {
-                color: $dark-grayish-violet;
-                transform: none;
-            }
-        }
     }
 }

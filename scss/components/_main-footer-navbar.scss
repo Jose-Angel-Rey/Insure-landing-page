@@ -1,3 +1,60 @@
 // *******************************
-//
+//      MAIN FOOTER - NAVBAR
 // *******************************
+
+.main-footer {
+    &__navbar {
+        font: 700 1.4rem $body-font;
+        margin-bottom: 3rem;
+
+        text: {
+            align: center;
+            transform: uppercase
+        }
+
+        @media screen and (min-width:500px) {
+            margin: 3rem 4rem;
+        }
+
+        @include for-medium-screens {
+            margin: 0;
+            text-align: left;
+        }
+
+        &:last-of-type {
+            @include for-large-screens {
+                margin-right: 25rem;
+            }
+        }
+
+    }
+
+    // ---------  Nav -----------
+    &__nav {
+        list-style-type: none;
+    }
+
+    &__nav-title {
+        color: $dark-grayish-violet;
+        margin-bottom: 2rem;
+    }
+
+    &__nav-link {
+        color: $very-dark-violet;
+        display: block;
+        margin-bottom: 1rem;
+        text-decoration: none;
+
+        @include for-medium-screens {
+            transition: all .5s;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:active {
+                color: $dark-grayish-violet;
+            }
+        }
+    }
+}
