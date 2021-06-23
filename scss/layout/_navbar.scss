@@ -26,6 +26,7 @@
 
     // --------- Hamburger btn --------- 
     &__hamburger-btn {
+        cursor: pointer;
         @include for-medium-screens {
             display: none;
         }
@@ -58,6 +59,10 @@
             padding-top: 0;
             height: auto;
             width: 45rem;
+            transform: none;
+        }
+
+        &--active{
             transform: none;
         }
     }
