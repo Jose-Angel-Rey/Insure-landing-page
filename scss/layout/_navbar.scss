@@ -14,6 +14,12 @@
         width: 90%;
         max-width: 110rem;
 
+        @include for-medium-screens {
+            opacity: 0;
+            transform: translateY(-250%);
+            animation: reveal 1s 1s ease forwards;
+        }
+
         @include for-large-screens {
             width: 80%;
         }
@@ -27,6 +33,7 @@
     // --------- Hamburger btn --------- 
     &__hamburger-btn {
         cursor: pointer;
+
         @include for-medium-screens {
             display: none;
         }
@@ -62,7 +69,7 @@
             transform: none;
         }
 
-        &--active{
+        &--active {
             transform: none;
         }
     }
