@@ -9,6 +9,7 @@
     position: relative;
     width: 100%;
 
+    // --------- Patterns --------- 
     &__left-pattern {
         position: absolute;
         left: 0;
@@ -75,8 +76,8 @@
         }
     }
 
+    // --------- Container --------- 
     &__container {
-        @include bdr(cyan);
         @include flexbox;
         width: 100%;
         max-width: 110rem;
@@ -109,9 +110,8 @@
         }
     }
 
-    // ---- Content ----
+    // ------- Content --------
     &__content {
-        @include bdr(cyan);
         font-size: 1.6rem;
         margin: 10rem auto;
         text-align: center;
@@ -158,41 +158,17 @@
         margin: 3rem auto 5rem;
     }
 
-    .btn {
-        border: 2px solid #fff;
-        padding: 1rem 3rem;
-        color: #fff;
-        text-decoration: none;
-
-        @include for-medium-screens {
-            transition: all .5s;
-            display: inline-block;
-            font-weight: 700;
-            text-transform: uppercase;
-
-            &:hover {
-                color: $very-dark-violet;
-                background-color: $very-light-gray;
-                transform: translateY(-5px);
-            }
-
-            &:active {
-                transform: none;
-            }
-        }
-    }
-
-    // ---- Image ----
+    // ------- Image --------
     &__picture {
-        order: -1;
         max-height: 40rem;
+        order: -1;
         width: 100%;
         z-index: 50;
 
         @include for-medium-screens {
             max-height: 100%;
-            width: 40%;
             order: 1;
+            width: 40%;
         }
 
         @media screen and (max-width:767px) {
@@ -222,12 +198,10 @@
 
         @media screen and (max-width:767px) {
             max-height: 65rem;
-
         }
 
         @media screen and (max-width:650px) {
             max-height: 50rem;
-
         }
 
         @media screen and (max-width:500px) {

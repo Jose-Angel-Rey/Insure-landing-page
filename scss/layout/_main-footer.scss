@@ -136,6 +136,7 @@
         margin: 0 .5rem;
 
         @include for-medium-screens {
+            font-size: 2.5rem;
             cursor: pointer;
             transition: all .5s;
             display: inline-block;

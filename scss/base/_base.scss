@@ -3,12 +3,8 @@
 // **************************
 
 .main-container{
-    @include bdr;
     @include flexbox;
     position: relative;
     overflow-x: hidden;
     width: 100%;
 }
-// img{
-//     max-width: 100%;
-// }
