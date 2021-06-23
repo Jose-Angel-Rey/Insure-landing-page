@@ -1,0 +1,95 @@
+// *********************************************************
+//          MAIN CONTENT - WE ARE DIFFERENT SECTION
+// *********************************************************
+
+.we-are-different {
+    @include flexbox;
+    color: $very-dark-violet;
+    margin-top: 10rem;
+    width: 100%;
+
+    @include for-large-screens {
+        align-items: flex-start;
+        margin-top: 30rem;
+    }
+
+    // -------- Title -----------
+    &__title {
+        font: 400 4.5rem $headings-font;
+        margin-bottom: 5rem;
+        text-align: center;
+        position: relative;
+
+        @include for-large-screens {
+            font-size: 7rem;
+            margin-bottom: 9rem;
+        }
+
+        &::after {
+            content: "";
+            background-color: $dark-violet;
+            position: absolute;
+            top: -3rem;
+            left: 25%;
+            height: 1px;
+            width: 15rem;
+
+            @include for-large-screens {
+                top: -5rem;
+                left: 0;
+            }
+        }
+    }
+
+    // -------- Content -----------
+    &__content {
+        @include flexbox;
+
+        @include for-large-screens {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+
+        }
+    }
+
+    // -------- Article -----------
+    &__article {
+        @include flexbox;
+        margin-bottom: 4rem;
+        width: 100%;
+        max-width: 37rem;
+
+        @include for-large-screens {
+            width: 30%;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        @media screen and (min-width:1200px) {
+            width: 32%;
+        }
+
+        // Article - title
+        &-title {
+            font: 400 3rem $headings-font;
+            margin: 3rem auto 2rem;
+
+            @include for-large-screens {
+                margin: 3rem 0;
+            }
+        }
+
+        //  Article - description
+        &-description {
+            color: $dark-grayish-violet;
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+            text-align: center;
+
+            @include for-large-screens {
+                text-align: left;
+            }
+        }
+    }
+}
